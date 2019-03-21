@@ -1,13 +1,14 @@
-package com.example.hiennv.vietbandodemo;
+package com.example.hiennv.vietbandodemo.base;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
 import com.vietbando.vietbandosdk.maps.MapView;
 import com.vietbando.vietbandosdk.maps.VietbandoMap;
 
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends AppCompatActivity {
     protected MapView mapView;
     protected VietbandoMap mMap;
 

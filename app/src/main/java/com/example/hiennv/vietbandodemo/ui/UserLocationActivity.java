@@ -1,4 +1,4 @@
-package com.example.hiennv.vietbandodemo;
+package com.example.hiennv.vietbandodemo.ui;
 
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;

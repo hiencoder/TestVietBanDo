@@ -1,23 +1,20 @@
-package com.example.hiennv.vietbandodemo;
+package com.example.hiennv.vietbandodemo.ui;
 
 import android.annotation.SuppressLint;
 import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.hiennv.vietbandodemo.R;
 import com.vietbando.services.commons.geojson.Feature;
 import com.vietbando.services.commons.geojson.Point;
-import com.vietbando.vietbandosdk.camera.CameraPosition;
 import com.vietbando.vietbandosdk.constants.Style;
-import com.vietbando.vietbandosdk.geometry.LatLng;
 import com.vietbando.vietbandosdk.maps.MapView;
-import com.vietbando.vietbandosdk.maps.OnMapReadyCallback;
 import com.vietbando.vietbandosdk.maps.VietbandoMap;
 import com.vietbando.vietbandosdk.style.layers.PropertyFactory;
 import com.vietbando.vietbandosdk.style.layers.SymbolLayer;
 import com.vietbando.vietbandosdk.style.sources.GeoJsonSource;
-import com.vietbando.vietbandosdk.maps.VietbandoMapOptions;
+
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {

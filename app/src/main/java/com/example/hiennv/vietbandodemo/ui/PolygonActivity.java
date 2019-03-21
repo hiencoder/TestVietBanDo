@@ -1,9 +1,10 @@
-package com.example.hiennv.vietbandodemo;
+package com.example.hiennv.vietbandodemo.ui;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.hiennv.vietbandodemo.R;
+import com.example.hiennv.vietbandodemo.base.BaseActivity;
 import com.vietbando.vietbandosdk.annotations.PolygonOptions;
 import com.vietbando.vietbandosdk.camera.CameraPosition;
 import com.vietbando.vietbandosdk.constants.Style;

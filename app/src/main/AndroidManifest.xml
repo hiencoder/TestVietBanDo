@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hiennv.vietbandodemo">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.hiennv.vietbandodemo"
+    android:installLocation="preferExternal">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -14,13 +16,21 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".UserLocationActivity"></activity>
-        <activity android:name=".GeoJsonActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.UserLocationActivity" />
+        <activity android:name=".ui.GeoJsonActivity" />
+        <activity android:name=".ui.PolygonActivity" />
+        <activity android:name=".ui.MapMoveCameraActivity">
 
         </activity>
-        <activity android:name=".PolygonActivity">
+        <activity android:name=".ui.demo.ChangeStyleActivity" />
+        <activity android:name=".ui.demo.AddUserLocationMapFragmentActivity">
+
+        </activity>
+        <activity android:name=".ui.demo.LocationComponentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

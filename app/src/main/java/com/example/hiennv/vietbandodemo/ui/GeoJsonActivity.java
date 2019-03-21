@@ -1,4 +1,4 @@
-package com.example.hiennv.vietbandodemo;
+package com.example.hiennv.vietbandodemo.ui;
 
 import android.graphics.Color;
 import android.os.AsyncTask;

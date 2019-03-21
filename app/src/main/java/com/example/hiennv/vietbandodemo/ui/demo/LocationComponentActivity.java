@@ -111,6 +111,8 @@ public class LocationComponentActivity extends BaseActivity implements Permissio
     }
 
     //https://medium.com/@ssaurel/getting-gps-location-on-android-with-fused-location-provider-api-1001eb549089
+
+    //https://gist.github.com/ccabanero/6996756
     @Override
     public void onProviderEnabled(String provider) {
 

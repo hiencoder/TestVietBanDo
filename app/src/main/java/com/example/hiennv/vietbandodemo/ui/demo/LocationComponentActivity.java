@@ -23,12 +23,13 @@ import com.vietbando.vietbandosdk.constants.Style;
 import com.vietbando.vietbandosdk.geometry.LatLng;
 import com.vietbando.vietbandosdk.maps.OnMapReadyCallback;
 import com.vietbando.vietbandosdk.maps.VietbandoMap;
+import com.vietbando.vietbandosdk.style.layers.SymbolLayer;
 
 import java.util.List;
 
 import timber.log.Timber;
 
-public class LocationComponentActivity extends BaseActivity implements PermissionsListener, OnMapReadyCallback, LocationListener,View.OnClickListener {
+public class LocationComponentActivity extends BaseActivity implements PermissionsListener, OnMapReadyCallback, LocationListener, View.OnClickListener {
     private LocationManager locationManager;
     private Location myLocation;
     private PermissionsManager permissionsManager;
@@ -51,10 +52,11 @@ public class LocationComponentActivity extends BaseActivity implements Permissio
 
     void getLocation() {
         try {
-            if (PermissionsManager.areLocationPermissionsGranted(this)){
+            if (PermissionsManager.areLocationPermissionsGranted(this)) {
                 locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, this);
-            }else {
+                myLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            } else {
                 permissionsManager = new PermissionsManager(this);
                 permissionsManager.requestLocationPermissions(this);
             }
@@ -97,7 +99,7 @@ public class LocationComponentActivity extends BaseActivity implements Permissio
                 .target(new LatLng(myLocation.getLatitude(), myLocation.getLongitude()))
                 // Sets the new camera position
                 .zoom(17) // Sets the zoom
-                .bearing(180) // Rotate the camera
+                .bearing(0) // Rotate the camera
                 .tilt(30) // Set the camera tilt
                 .build(); // Creates a CameraPosition from the builder
 
